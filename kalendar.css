@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 340px;
+}
+
+#calendar {
+    width: 800px;
+    height: 100%;
+    margin: 0px auto;
+    margin-top: 200px;
+}
+
+#calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#current-month {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar-table th,
+#calendar-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#calendar-table td:empty {
+    background-color: #eee;
+}
+
+#prev-month-button,
+#next-month-button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#prev-month-button:hover,
+#next-month-button:hover {
+    color: #666;
+}
+
+#calendar-table td {
+    font-size: 1.2em;
+}
+
+#calendar-table td {
+    width: 40px;
+    height: 60px;
+}
+
+td.current {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+#calendar-table td {
+    cursor: pointer;
+}
+
+#calendar-table td:hover {
+    background-color: #ddd;
+}

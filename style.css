@@ -11,92 +11,6 @@ body {
     min-width: 340px;
 }
 
-#navbar {
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    margin-bottom: 104px;
-    z-index: 997;
-    box-shadow: 0px 1px 7px 0px grey;
-    /* display: flex; */
-}
-
-#navbar .container {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.container img {
-    height: 90px;
-    /* height: 5.5em; */
-    margin: 5px;
-    margin-right: 60px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.menu li {
-    margin: 40px 80px 0 0;
-    /* margin: 2.5em 6em 0 0; */
-}
-
-.menu a {
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 1.1em;
-    color: #D4AF37;
-}
-
-.menu a:hover {
-    color: rgb(219, 219, 219);
-}
-
-.schedule-button {
-    /* margin-left: 40px; */
-    padding: 8px 12px 8px 12px;
-    border: 2px solid #D4AF37;
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1px;
-    /* text-align: center; */
-    color: #D4AF37;
-    margin: 20px;
-    background-color: white;
-    transition: 300ms;
-}
-
-.schedule-button:hover {
-    color: white;
-    background-color: #D4AF37;
-    cursor: pointer;
-}
-
-#navbar .open-menu {
-    display: none;
-    color: #D4AF37;
-    font-size: 1.5rem;
-    padding: 30px;
-    cursor: pointer;
-}
-
-#navbar .close-menu {
-    display: none;
-    color: #D4AF37;
-    font-size: 1.5rem;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#navbar .menu .close-menu {
-    display: none;
-    cursor: pointer;
-}
-
 #img-header {
     width: 100%;
     display: flex;
@@ -374,59 +288,6 @@ body {
 }
 
 
-#footer {
-    width: 100%;
-    background-color: rgb(46, 46, 46);
-    padding: 50px;
-    padding-bottom: 30px;
-}
-
-#footer .container7 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fb-insta-icon span {
-    color: white;
-    background-color: rgb(77, 77, 77);
-    display: inline;
-    height: 20px;
-    padding: 10px;
-    margin: 50px;
-    border-radius: 50%;
-}
-
-.fb-insta-icon span:hover {
-    color: #D4AF37;
-    cursor: pointer;
-}
-
-.contact-me {
-    padding: 0;
-    padding-top: 80px;
-    color: white;
-    text-align: center;
-    font-family: 'Jost', sans-serif;
-}
-
-.contact-me li {
-    margin: 15px;
-    list-style: none;
-}
-
-#footer p {
-    color: white;
-    font-size: 16px;
-    font-family: 'Jost', sans-serif;
-    text-align: center;
-    padding-top: 95px;
-    padding-bottom: 0;
-}
-
-
-
 @media only screen and (max-width:1000px) {
 
     html,
@@ -478,9 +339,10 @@ body {
     }
 
     .schedule-button {
-        padding: 8px;
-        height: 60px;
-        width: 150px;
+        padding: 12px;
+        text-decoration: none !important;
+        display: flex;
+        align-items: center;
     }
 
     #navbar .open-menu {
@@ -495,7 +357,7 @@ body {
     }
 
     #img-header .container2 {
-        margin-top: 99px;
+        margin-top: 91px;
         background-size: cover;
         background-position-x: center;
         background-position-y: center;

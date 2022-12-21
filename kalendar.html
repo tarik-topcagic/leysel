@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400&family=Montserrat:wght@700&family=Readex+Pro:wght@200&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="kalendar.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo-image">
+                <img src="Images/lejsel.jpg">
+            </div>
+            <ul class="menu">
+                <div class="close-menu"><i class="fa fa-times"></i></div>
+                <li><a href="file:///C:/Users/Topcagic/Desktop/LEYSEL/index.html">POČETNA</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">STRANICE</a></li>
+            </ul>
+            <a class="schedule-button" href="kalendar.html">
+                POGLEDAJ RASPORED
+            </a>
+            <div class="open-menu"><i class="fa fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <div id="calendar">
+        <div id="calendar-nav">
+            <button id="prev-month-button">
+            </button>
+            <span id="current-month"></span>
+            <button id="next-month-button">>></button>
+        </div>
+        <table id="calendar-table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Calendar days will be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer id="footer">
+        <div class="container7">
+            <div class="fb-insta-icon">
+                <span><i class="fab fa-facebook-f"></i></span>
+                <span><i class="fab fa-instagram"></i></span>
+            </div>
+            <div class="contact-me">
+                <h2>CONTACT ME:</h2>
+                <ul>
+                    <li>Brčanska 9, Sarajevo, BiH</li>
+                    <li>lejla.sel.96@gmail.com</li>
+                    <li>Telefon: (+387)62 620 038</li>
+                </ul>
+            </div>
+            <p>&copy; Copyright <strong>Leysel</strong> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="kalendar.js"></script>
+</body>
+
+</html>
