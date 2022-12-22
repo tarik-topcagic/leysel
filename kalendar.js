@@ -13,6 +13,13 @@ function generateCalendar() {
     // Clear any existing days from the calendar
     calendarBody.innerHTML = '';
 
+    let nameOfMonths = ['JANUAR', 'FEBRUAR', 'MART', 'APRIL',
+        'MAJ', 'JUNI', 'JULI', 'AUGUST', 'SEPTEMBAR', 'OKTOBAR',
+        'NOVEMBAR', 'DECEMBAR'
+    ]
+
+    let nameOfCurrentMonth = nameOfMonths[currentMonth];
+
     // Get the first day of the month
     let firstDay = new Date(currentYear, currentMonth, 1);
     let firstDayOfWeek = firstDay.getDay();
@@ -46,7 +53,7 @@ function generateCalendar() {
     }
 
     // Update the current month display
-    currentMonthSpan.innerHTML = `${currentMonth + 1} / ${currentYear}`;
+    currentMonthSpan.innerHTML = `${nameOfCurrentMonth} / ${currentYear}`;
 }
 
 // Move to the previous month

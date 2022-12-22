@@ -37,12 +37,12 @@ body {
 .menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
 .menu li {
-    margin: 40px 80px 0 0;
-    /* margin: 2.5em 6em 0 0; */
+    margin-right: 80px;
 }
 
 .menu a {

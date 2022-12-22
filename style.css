@@ -526,3 +526,9 @@ body {
     }
 
 }
+
+@media only screen and (min-width:900px) {
+    #cupping-more .container5 {
+        flex-direction: row;
+    }
+}

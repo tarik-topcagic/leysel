@@ -13,16 +13,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400&family=Montserrat:wght@700&family=Readex+Pro:wght@200&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="kalendar.css">
+    <link rel="icon" href="Images/logo-crop.png">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="kalendar.css">
+    <title>Pogledaj raspored</title>
 </head>
 
 <body>
     <nav id="navbar">
         <div class="container">
             <div class="logo-image">
-                <img src="Images/lejsel.jpg">
+                <a href="index.html"><img src="Images/lejsel.jpg"></a>
             </div>
             <ul class="menu">
                 <div class="close-menu"><i class="fa fa-times"></i></div>
@@ -39,6 +41,11 @@
         </div>
     </nav>
 
+    <div id="reservation">
+        <p>Kalendar rezervacije</p>
+        <h1>Napravi rezervaciju</h1>
+    </div>
+
     <div id="calendar">
         <div id="calendar-nav">
             <button id="prev-month-button">
@@ -49,13 +56,13 @@
         <table id="calendar-table">
             <thead>
                 <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
+                    <th>NED</th>
+                    <th>PON</th>
+                    <th>UTO</th>
+                    <th>SRI</th>
+                    <th>ČET</th>
+                    <th>PET</th>
+                    <th>SUB</th>
                 </tr>
             </thead>
             <tbody id="calendar-body">
@@ -83,6 +90,7 @@
     </footer>
 
     <script src="kalendar.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
