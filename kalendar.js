@@ -23,10 +23,12 @@ function generateCalendar() {
     // Get the first day of the month
     let firstDay = new Date(currentYear, currentMonth, 1);
     let firstDayOfWeek = firstDay.getDay();
+    if (firstDayOfWeek === 0) firstDayOfWeek = 7;
 
     // Get the last day of the month
     let lastDay = new Date(currentYear, currentMonth + 1, 0);
     let lastDate = lastDay.getDate();
+    if (lastDate === 0) lastDate = 7;
 
     // Create a calendar row for each week
     let date = 1;
@@ -34,7 +36,7 @@ function generateCalendar() {
         let row = document.createElement('tr');
 
         // Create a calendar cell for each day of the week
-        for (let j = 0; j < 7; j++) {
+        for (let j = 1; j < 8; j++) {
             let cell = document.createElement('td');
 
             // If the current cell represents a day in the current month, add the
