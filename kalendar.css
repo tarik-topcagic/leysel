@@ -7,6 +7,7 @@
 body {
     width: 100%;
     min-width: 340px;
+    position: relative;
 }
 
 #reservation {
@@ -113,6 +114,82 @@ td.current {
     background-color: #ddd;
 }
 
+#form-div {
+    position: absolute;
+    top: 25%;
+    right: 35%;
+    left: 35%;
+    width: 30%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgb(178, 178, 178);
+    display: none;
+    font-size: 18px;
+    color: rgb(127, 127, 127);
+}
+
+#form-div p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+#form-div h2 {
+    text-align: center;
+    color: #D4AF37;
+    letter-spacing: 0.2rem;
+    margin-bottom: 12px;
+}
+
+#form-div label {
+    margin: 5px;
+    letter-spacing: 0.1em;
+}
+
+#form-div input {
+    margin: 5px;
+    padding: 6px;
+    width: 70%;
+    font-size: 17px;
+    color: rgb(127, 127, 127);
+}
+
+#submit-button {
+    background-color: #D4AF37;
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    padding: 15px 30px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #D4AF37;
+}
+
+#form-div button:hover {
+    color: #D4AF37;
+    background-color: white;
+    border: 2px solid #D4AF37;
+}
+
+/* #form-div.visible {
+    display: block;
+} */
+
+#close-button {
+    background-color: #D4AF37;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+    text-align: center;
+    display: block;
+    border: 2px solid #D4AF37;
+    cursor: pointer;
+    color: white;
+}
+
+
 @media only screen and (max-width:1000px) {
 
     html,
@@ -190,6 +267,14 @@ td.current {
         margin-top: 15%;
         width: 100%;
         /* overflow-x: scroll; */
+    }
+
+    #form-div {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        left: 5%;
+        width: 90%;
     }
 
     .fb-insta-icon {
