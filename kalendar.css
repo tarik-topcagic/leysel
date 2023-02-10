@@ -31,6 +31,7 @@ body {
     width: 90%;
     height: 100%;
     margin: 0px auto;
+    margin-bottom: 200px;
     /* margin: 0px 20px 0px 20px; */
     margin-top: 5%;
     font-family: 'Jost', sans-serif;
@@ -116,11 +117,11 @@ td.current {
 
 #form-div {
     position: absolute;
-    top: 25%;
+    top: 21%;
     right: 35%;
     left: 35%;
     width: 30%;
-    padding: 40px;
+    padding: 35px;
     background-color: white;
     box-shadow: 2px 2px 5px 5px rgb(178, 178, 178);
     display: none;
@@ -146,15 +147,18 @@ td.current {
     letter-spacing: 0.1em;
 }
 
-#form-div input {
+#form-div input,
+#form-div select {
     margin: 5px;
     padding: 6px;
     width: 70%;
     font-size: 17px;
+    font-family: 'Jost', sans-serif;
     color: rgb(127, 127, 127);
 }
 
-#submit-button {
+#submit-button,
+#cancel-button {
     background-color: #D4AF37;
     color: white;
     letter-spacing: 0.1em;
@@ -275,6 +279,12 @@ td.current {
         right: 5%;
         left: 5%;
         width: 90%;
+    }
+
+    #submit-button,
+    #cancel-button {
+        padding: 10px;
+        margin: 5px;
     }
 
     .fb-insta-icon {
