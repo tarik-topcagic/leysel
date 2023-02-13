@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 340px;
+    position: relative;
+}
+
+.cjenovnik-div-container {
+    background-color: #fffaf6;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding: 60px;
+    width: 100%;
+}
+
+#cjenovnik-usluga-title {
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 1.3rem;
+    color: rgb(127, 127, 127);
+    letter-spacing: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#subtitles {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(127, 127, 127);
+    letter-spacing: 1.5px;
+    font-family: 'Jost', sans-serif;
+    padding-bottom: 10px;
+}
+
+#cjenovnik-div {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+#cjenovnik-div img {
+    width: 140px;
+    height: 90px;
+}
+
+.one-column .row {
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px dotted #e1e1e1;
+    padding: 10px;
+}
+
+.region,
+.region-price {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.region p,
+.region-price p {
+    padding: 20px 0;
+}
+
+
+
+@media only screen and (max-width:1000px) {
+    #navbar .container {
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .container img {
+        height: 65px;
+        margin: 5px;
+    }
+
+    .menu {
+        height: 50vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        text-align: center;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 1px 7px 0px grey;
+        justify-content: center;
+        align-items: center;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    .menu li {
+        margin: 22px;
+    }
+
+    .menu a {
+        padding: 10px;
+        transition: 300ms;
+    }
+
+    .menu a:hover {
+        background-color: #D4AF37;
+        color: white;
+    }
+
+    .schedule-button {
+        padding: 12px;
+        text-decoration: none !important;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar .open-menu {
+        display: inline;
+    }
+
+    #navbar .menu .close-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .cjenovnik-div-container {
+        padding: 20px;
+    }
+
+    #cjenovnik-usluga-title {
+        font-size: 0.8rem;
+    }
+
+    #cjenovnik-div {
+        font-size: 18px;
+    }
+
+    #cjenovnik-div img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .one-column .row {
+        padding: 5px;
+    }
+
+    .fb-insta-icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .fb-insta-icon span {
+        height: 33px;
+    }
+
+}
+
+@media only screen and (max-width:650px) {
+    #cjenovnik-div img {
+        width: 100px;
+        height: 50px;
+    }
+
+    #subtitles {
+        font-size: 15px;
+    }
+
+
+    .region p,
+    .region-price p {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width:370px) {
+    .cjenovnik-div-container {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .region p,
+    .region-price p {
+        font-size: 14px;
+    }
+
+    #cjenovnik-div {
+        font-size: 14px;
+    }
+
+    .paragraph-add {
+        font-size: 13px;
+    }
+}
