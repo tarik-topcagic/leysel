@@ -32,7 +32,7 @@
                 <li><a href="#">BLOG</a></li>
                 <li><a href="#">SHOP</a></li>
                 <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">STRANICE</a></li>
+                <li><a href="cjenovnik.html">CJENOVNIK</a></li>
             </ul>
             <a class="schedule-button" href="kalendar.html">
                 POGLEDAJ RASPORED
@@ -70,28 +70,28 @@
             </tbody>
         </table>
 
-        <div id="form-div">
+        <form id="form-div">
             <p></p>
             <button id="close-button">X</button>
             <h2>Zakažite rezervaciju</h2>
-            <label for="name">IME:</label><br>
-            <input type="text" id="name"><br>
-            <label for="surname">PREZIME:</label><br>
-            <input type="text" id="surname"><br>
-            <label for="phone_number">BROJ TELEFONA:</label><br>
-            <input type="tel" id="phone_number" name="phone"><br>
-            <label for="day_time">VRIJEME:</label><br>
-            <input type="time" id="day_time" name="appt" min="09:00" max="18:00" required><br>
-            <label for="services">USLUGE:</label><br>
-            <select id="services">
-                <option value="head-cupping-terapy">HIDŽAMA GLAVE</option>
-                <option value="back-cupping-terapy">HIDŽAMA LEĐA</option>
-                <option value="hands-cupping-terapy">HIDŽAMA RUKU</option>
-                <option value="legs-cupping-terapy">HIDŽAMA NOGU</option>
-            </select><br>
+            <label for="name">IME<small>*</small></label><br>
+            <input type="text" id="name" name="name"><br>
+            <div id="name-error" class="error"></div>
+            <label for="surname">PREZIME<small>*</small></label><br>
+            <input type="text" id="surname" name="surname"><br>
+            <div id="surname-error" class="error"></div>
+            <label for="phone_number">BROJ TELEFONA<small>*</small></label><br>
+            <input type="tel" id="phone_number" name="phone" name="phone"><br>
+            <div id="phone-error" class="error"></div>
+            <label for="day_time">VRIJEME<small>*</small></label><br>
+            <input type="time" id="day_time" name="time" min="09:00" max="18:00"><br>
+            <div id="time-error" class="error"></div>
+            <label for="services">USLUGE<small>*</small></label><br>
+            <input type="text" id="services"><br>
+            <div id="services-error" class="error"></div>
             <button type="submit" id="submit-button">POŠALJI</button>
-            <button type="submit" id="cancel-button">PONIŠTI</button>
-        </div>
+            <button type="reset" id="cancel-button">PONIŠTI</button>
+        </form>
 
     </div>
 

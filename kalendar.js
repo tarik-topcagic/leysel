@@ -3,8 +3,18 @@ const currentMonthSpan = document.getElementById('current-month');
 const prevMonthButton = document.getElementById('prev-month-button');
 const nextMonthButton = document.getElementById('next-month-button');
 const calendarBody = document.getElementById('calendar-body');
-var formDiv = document.getElementById('form-div');
-
+const formDiv = document.getElementById('form-div');
+const nameInput = document.getElementById('name');
+const nameError = document.getElementById('name-error');
+const surnameInput = document.getElementById('surname');
+const surnameError = document.getElementById('surname-error');
+const phoneInput = document.getElementById('phone_number');
+const phoneError = document.getElementById('phone-error');
+const timeInput = document.getElementById('day_time');
+const timeError = document.getElementById('time-error');
+const servicesInput = document.getElementById('services');
+const servicesError = document.getElementById('services-error');
+var elements = document.querySelectorAll("#form-div .error");
 
 let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
@@ -42,15 +52,34 @@ function generateCalendar() {
                     let paragraph = document.querySelector('#form-div p');
                     paragraph.innerText = `${cell.innerText}. ${currentMonth + 1}. ${currentYear}`;
 
-                    // formDiv.classList.add('visible');
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].style.display = 'none';
+                    }
+
                     formDiv.style.display = 'block';
+
+                    formDiv.addEventListener("submit", function (event) {
+                        event.preventDefault();
+
+                        checkForm();
+
+                    });
+
+
                     document.getElementById('close-button').addEventListener('click', () => {
                         formDiv.style.display = 'none';
+                    });
+
+                    document.getElementById('cancel-button').addEventListener('click', () => {
+                        for (var i = 0; i < elements.length; i++) {
+                            elements[i].style.display = 'none';
+                        }
                     });
                 });
 
                 cell.innerHTML = date;
                 date++;
+
             }
 
             row.appendChild(cell);
@@ -116,14 +145,92 @@ function addClickEventToDays() {
     });
 }
 
+function checkForm() {
+    var hasErrors = false;
+
+    if (nameInput.value === "") {
+        nameError.innerHTML = "Molimo Vas da unesete svoje ime!";
+        nameError.style.display = 'block';
+        hasErrors = true;
+    } else if (!/^[a-zA-ZćĆčČšŠđĐžŽ]+$/.test(nameInput.value)) {
+        nameError.innerHTML = "Molimo Vas da unesete validno ime!";
+        nameError.style.display = 'block';
+        hasErrors = true;
+    } else {
+        nameError.style.display = "none";
+    }
+    nameInput.addEventListener("input", function () {
+        document.getElementById("name-error").style.display = "none";
+    });
+
+
+    if (surnameInput.value === "") {
+        surnameError.innerHTML = "Molimo Vas da unesete svoje prezime!";
+        surnameError.style.display = 'block';
+        hasErrors = true;
+    }
+    else if (!/^[a-zA-ZćĆčČšŠđĐžŽ]+$/.test(surnameInput.value)) {
+        surnameError.innerHTML = "Molimo Vas da unesete validno prezime!";
+        surnameError.style.display = 'block';
+        hasErrors = true;
+    } else {
+        surnameError.style.display = "none";
+    }
+    surnameInput.addEventListener("input", function () {
+        document.getElementById("surname-error").style.display = "none";
+    });
+
+
+    if (phoneInput.value == "") {
+        phoneError.innerHTML = "Molimo Vas da unesete broj telefona!";
+        phoneError.style.display = 'block';
+        hasErrors = true;
+    }
+    else if (!/^[0-9]+$/.test(phoneInput.value)) {
+        phoneError.innerHTML = "Molimo Vas da unesete validan broj telefona!";
+        phoneError.style.display = 'block';
+        hasErrors = true;
+    } else {
+        phoneError.style.display = "none";
+    }
+    phoneInput.addEventListener("input", function () {
+        document.getElementById("phone-error").style.display = "none";
+    });
+
+
+    if (timeInput.value == "") {
+        timeError.innerHTML = "Molimo Vas da izaberete željeni termin!";
+        timeError.style.display = 'block';
+        hasErrors = true;
+    } else {
+        timeError.style.display = "none";
+    }
+    timeInput.addEventListener("input", function () {
+        document.getElementById("time-error").style.display = "none";
+    });
+
+
+    if (servicesInput.value == "") {
+        servicesError.innerHTML = "Molimo vas da upišete željenu uslugu!";
+        servicesError.style.display = 'block';
+        hasErrors = true;
+    }
+    else if (!/^[a-zA-ZćĆčČšŠđĐžŽ]+$/.test(servicesInput.value)) {
+        servicesError.innerHTML = "Nije validno!";
+        servicesError.style.display = 'block';
+        hasErrors = true;
+    } else {
+        servicesError.style.display = "none";
+    }
+
+    if (hasErrors === false) {
+        alert("Uspješno ste prijavili termin.");
+    }
+}
+
 generateCalendar();
 highlightCurrentDay();
 addClickEventToDays();
 
-window.onclick = (event) => {
-    console.log(event.target)
-    // if (event.target !== formDiv) {
-    //     formDiv.style.display = 'none'
-    // }
-}
+
 

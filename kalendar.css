@@ -31,7 +31,7 @@ body {
     width: 90%;
     height: 100%;
     margin: 0px auto;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
     /* margin: 0px 20px 0px 20px; */
     margin-top: 5%;
     font-family: 'Jost', sans-serif;
@@ -147,8 +147,7 @@ td.current {
     letter-spacing: 0.1em;
 }
 
-#form-div input,
-#form-div select {
+#form-div input {
     margin: 5px;
     padding: 6px;
     width: 70%;
@@ -193,6 +192,24 @@ td.current {
     color: white;
 }
 
+small {
+    color: red;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 5px;
+}
+
+@media only screen and (max-width:1300px) {
+    #form-div {
+        width: 60%;
+        top: 20%;
+        right: 20%;
+        left: 20%;
+    }
+}
 
 @media only screen and (max-width:1000px) {
 
@@ -275,7 +292,7 @@ td.current {
 
     #form-div {
         position: absolute;
-        top: 30%;
+        top: 28%;
         right: 5%;
         left: 5%;
         width: 90%;
@@ -295,5 +312,23 @@ td.current {
 
     .fb-insta-icon span {
         height: 33px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #form-div {
+        width: 80%;
+        top: 26%;
+        right: 10%;
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    #form-div {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+
     }
 }
